@@ -47,5 +47,12 @@ public class MainActivity extends AppCompatActivity {
                 answer.setText(String.valueOf(result));
             }
         });
+        divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = String.valueOf(Integer.valueOf(number1.getText().toString()) / Integer.valueOf(number2.getText().toString()));
+                answer.setText(String.valueOf(result));
+            }
+        });
     }
 }
