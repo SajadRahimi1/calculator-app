@@ -24,10 +24,11 @@
             android:layout_weight="0"
             android:background="#4CAF50"
             android:ems="10"
+            android:hint="Number 1"
             android:inputType="number"
             android:lines="2"
             android:singleLine="false"
-            android:text="Number2: " />
+            android:textColorHint="#000000" />
 
         <EditText
             android:id="@+id/secondNumber"
@@ -39,10 +40,11 @@
             android:layout_weight="0"
             android:background="#FFEB3B"
             android:ems="10"
+            android:hint="Number 2"
             android:inputType="number"
             android:lines="2"
             android:singleLine="false"
-            android:text="Number1: " />
+            android:textColorHint="#000000" />
 
         <LinearLayout
             android:layout_width="match_parent"
