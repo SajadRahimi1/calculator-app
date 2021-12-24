@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button minus;
     Button divide;
     Button multiple;
+    Button multiple2;
     EditText number1;
     EditText number2;
     TextView answer;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         minus = findViewById(R.id.minus);
         divide = findViewById(R.id.divide);
         multiple = findViewById(R.id.multiple);
+        multiple2 = findViewById(R.id.multiple2);
         number1 = findViewById(R.id.firstNumber);
         number2 = findViewById(R.id.secondNumber);
         answer = findViewById(R.id.answer);
@@ -53,12 +55,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String result = String.valueOf(Integer.valueOf(number1.getText().toString()) / Integer.valueOf(number2.getText().toString()));
                 answer.setText(String.valueOf(result));
+
             }
         });
         multiple.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String result = String.valueOf(Integer.valueOf(number1.getText().toString()) * Integer.valueOf(number2.getText().toString()));
+                answer.setText(String.valueOf(result));
+            }
+        });
+
+        multiple2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = String.valueOf(Math.pow(Integer.valueOf (number1.getText().toString()),Integer.valueOf (number2.getText().toString())));
                 answer.setText(String.valueOf(result));
             }
         });
