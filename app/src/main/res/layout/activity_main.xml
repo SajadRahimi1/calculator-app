@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/bg"
+        tools:layout_editor_absoluteY="290dp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:background="#A4AFEA"
-        android:orientation="vertical">
+        android:background="#B2454A4A"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.312"
+        tools:layout_editor_absoluteX="0dp">
 
         <EditText
             android:id="@+id/firstNumber"
@@ -29,6 +40,8 @@
             android:inputType="number"
             android:lines="2"
             android:singleLine="false"
+            android:textAlignment="center"
+            android:textColor="@color/white"
             android:textColorHint="#000000" />
 
         <EditText
@@ -45,65 +58,63 @@
             android:inputType="number"
             android:lines="2"
             android:singleLine="false"
+            android:textAlignment="center"
+            android:textColor="@color/white"
             android:textColorHint="#000000" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="0"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:id="@+id/plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="#6ECD54"
-                android:text="+" />
+                android:background="#8FD6D7D7"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/plus" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/minus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="#6ECD54"
-                android:text="-" />
+                android:background="#8FD6D7D7"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/minus" />
 
-            <Button
-                android:id="@+id/divide"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
-                android:layout_weight="1"
-                android:background="#6ECD54"
-                android:text="÷" />
-
-            <Button
+            <ImageButton
                 android:id="@+id/multiple"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="#6ECD54"
-                android:text="x" />
+                android:background="#8FD6D7D7"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/multiple" />
 
-            <Button
-                android:id="@+id/multiple2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
+            <ImageButton
+                android:id="@+id/divide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="#6ECD54"
-                android:text="^" />
+                android:background="#8FD6D7D7"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/divide" />
         </LinearLayout>
 
         <TextView
@@ -115,8 +126,9 @@
             android:layout_weight="0"
             android:gravity="center"
             android:text="جواب"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="22dp" />
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
